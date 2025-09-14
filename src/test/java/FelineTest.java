@@ -33,7 +33,7 @@ class FelineTest {
             "2, 2",
             "-2, -2"
     })
-    void GetKittensIntCountKittensTest(int expected, int kittensCount) {
+    void getKittensIntCountKittensTest(int expected, int kittensCount) {
         Feline feline = new Feline();
         assertEquals(expected, feline.getKittens(kittensCount));
     }
