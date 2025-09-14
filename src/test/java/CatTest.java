@@ -13,17 +13,17 @@ import static org.junit.jupiter.api.Assertions.*;
 class CatTest {
 
     @Mock
-    Feline feline = new Feline();
-
-    Cat cat = new Cat(feline);
+    private Feline feline;
 
     @Test
     void getSoundTest() {
+        Cat cat = new Cat(feline);
         assertEquals("Мяу", cat.getSound());
     }
 
     @Test
     void getFoodTest() throws Exception {
+        Cat cat = new Cat(feline);
         assertEquals(List.of("Животные", "Птицы", "Рыба") , cat.getFood());
     }
 }

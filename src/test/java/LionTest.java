@@ -1,6 +1,5 @@
 import com.example.Feline;
 import com.example.Lion;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -14,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class LionTest {
 
     @Mock
-    Feline feline = new Feline();
+    private Feline feline;
 
 
 
@@ -38,7 +37,7 @@ class LionTest {
 
     @Test
     public void incorrectLionSexTest() throws Exception   {
-        Exception exception = Assert.assertThrows(Exception.class, () -> {
+        Exception exception = assertThrows(Exception.class, () -> {
             Lion lion = new Lion("квадробер", feline);
         });
         assertEquals("Используйте допустимые значения пола животного - самей или самка", exception.getMessage());
